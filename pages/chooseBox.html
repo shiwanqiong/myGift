@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的盒子</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="../css/ydui.css"/>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/chooseBox.css">
+    <script src="../js/ydui.flexible.js"></script>
+</head>
+<body>
+    <div class="root">
+        <header>
+            <div class="short_info">
+                <span class="short_btn"></span>
+                <a href="myCoin.html" class="coin_info">
+                    <span class="icon_coin"></span>
+                    <span class="coin_count">150</span>
+                    <span class="icon_add"></span>
+                </a>
+            </div>
+            <a href="##" class="intro_btn" onclick="showPrizeIntro()">奖品介绍</a>
+            <ul class="nav">
+                <li>
+                    <a href="myCoin.html">
+                        充值中心
+                    </a>
+                </li>
+                <li>
+                    <a href="prizeIntro.html">
+                        奖品介绍
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        客服中心
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="main">
+            <div class="box row1 column1" onclick="drop(this,1,1)"></div>
+            <div class="box row1 column2" onclick="drop(this,1,2)"></div>
+            <div class="box row1 column3"onclick="drop(this,1,3)"></div>
+            <div class="box row1 column4"onclick="drop(this,1,4)"></div>
+            <div class="box row1 column5"onclick="drop(this,1,5)"></div>
+
+            <div class="box row2 column1" onclick="drop(this,2,1)"></div>
+            <div class="box row2 column2" onclick="drop(this,2,2)"></div>
+            <div class="box row2 column3" onclick="drop(this,2,3)"></div>
+            <div class="box row2 column4" onclick="drop(this,2,4)"></div>
+            <div class="box row2 column5" onclick="drop(this,2,5)"></div>
+
+            <div class="box row3 column1" onclick="drop(this,3,1)"></div>
+            <div class="box row3 column2" onclick="drop(this,3,2)"></div>
+            <div class="box row3 column3" onclick="drop(this,3,3)"></div>
+            <div class="box row3 column4" onclick="drop(this,3,4)"></div>
+            <div class="box row3 column5" onclick="drop(this,3,5)"></div>
+
+            <div class="box row4 column1" onclick="drop(this,4,1)"></div>
+            <div class="box row4 column2" onclick="drop(this,4,2)"></div>
+            <div class="box row4 column3" onclick="drop(this,4,3)"></div>
+            <div class="box row4 column4" onclick="drop(this,4,4)"></div>
+            <div class="box row4 column5" onclick="drop(this,4,5)"></div>
+
+            <div class="machine_bottom"></div>
+            <div class="container">
+                <img src="../img/lucky.png" alt="">
+            </div>
+
+            <span class="price">
+                每次 <br>50元
+            </span>
+
+        </div>
+        <footer>
+            <a href="index.html" class="active">
+                <dl>
+                    <dt class="home">
+                        <img src="../img/home.png" alt="">
+                    </dt>
+                    <dd>首页</dd>
+                </dl>
+            </a>
+            <a href="mine.html">
+                <dl>
+                    <dt class="mine">
+                        <img src="../img/mine.png" alt="">
+                    </dt>
+                    <dd>我的</dd>
+                </dl>
+            </a>
+            <a href="">
+                <dl>
+                    <dt class="cus_service">
+                        <img src="../img/cus_service.png" alt="">
+                    </dt>
+                    <dd>客服</dd>
+                </dl>
+            </a>
+        </footer>
+        <div class="mask">
+            <div class="gift_plat">
+                <img src="../img/box_close.png" alt="" class="gift_box box_close show shake">
+                <div class="gift_box box_open" onclick="gotobox()">
+                    <div class="gift">
+                        <dl>
+                            <dt>恭喜您抽到礼物</dt>
+                            <dd>
+                                <img src="../img/coin_big.png" alt="">
+                            </dd>
+                        </dl>
+                    </div>
+                    <img src="../img/box_open.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask1">
+        <div class="prize_intro">
+            <p class="title">奖品介绍</p>
+            <p class="text">
+                礼品又称礼物。通常是人和人之间互相赠送的物件。其目的是为了取悦对方，
+                或表达善意、敬意。礼物也用来庆祝节日或重要的日子，比如情人节的玫瑰或生日礼物，
+                不可不送。礼物也可以是非物质的。中国古代有“千里送鹅毛，礼轻情义重”的说法，
+                表示礼物的价值在于送礼者的善意和心意，而非礼物本身的价值。礼物不需要太贵，
+                只要表达了心意就可以了。礼物拉近了人与人之间的距离。
+            </p>
+        </div>
+    </div>
+    <div class="body_mask"></div>
+</body>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/anime.min.js"></script>
+<script>
+    var isClick=false;
+    function drop(ele,row,column){
+        if(isClick==true){
+            return;
+        }
+        isClick=true;
+        var transValue=((4-row)*150+134)/100;
+        var rotateValue1=30;
+        var rotateValue2=0;
+        if(column==1){
+            rotateValue2=90;
+            transValue=((4-row)*150+150)/100;
+        }
+        else if(column==4){
+            rotateValue1=-30;
+        }
+        else if(column==5){
+            transValue=((4-row)*150+134)/100;
+            rotateValue1=-30;
+            rotateValue2=-90;
+        }
+        var cssProperties = anime({
+            targets: ele,
+            scale: {
+                value: 1.2,
+                duration:800,
+                easing: 'easeInOutQuart'
+            },
+            translateY:{
+                value:transValue+'rem',
+                delay:800,
+                duration:800,
+                easing: 'easeInOutQuart'
+            },
+            rotate: [
+                {
+                    value: rotateValue1,
+                    delay:0,
+                    easing: 'easeInOutQuart',
+                    duration:1200
+                },
+                {
+                    value:rotateValue2
+                }
+            ]
+        });
+        setTimeout(function(){
+            if(!$('.mask').hasClass('show')){
+                $('.mask').addClass('show');
+            }
+        },2000);
+        setTimeout(function(){
+            $('.box_close').removeClass('show');
+            $('.box_open').addClass('show');
+        },3000)
+    }
+    function gotobox(){
+        window.location.href='mybox.html';
+    }
+    function showPrizeIntro(){
+        if(!$('.mask1').hasClass('show')){
+            $('.mask1').addClass('show');
+        }
+    }
+    $(function(){
+        $('.mask1').click(function(){
+            $(this).removeClass('show');
+        });
+        $('.short_btn').click(function(){
+            $('.nav').slideDown();
+            $('.body_mask').show();
+        });
+        $('.body_mask').click(function(){
+            $('.nav').slideUp();
+            $('.body_mask').hide();
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,71 @@
+.root{
+    background-color: #DD4B2A;
+}
+header{
+    position: relative;
+    width:100%;
+    height:3.92rem;
+    background: url("../img/prize_intro_banner.png") no-repeat;
+    background-size: 100%;
+}
+.main{
+    padding:0 0.28rem;
+    margin-top:-0.3rem;
+}
+.title{
+    text-align: center;
+    font-size: 0.32rem;
+    line-height: 0.92rem;
+    color:#fff;
+    font-weight: 400;
+}
+.title i{
+    font-style: normal;
+    display: inline-block;
+    width:0.14rem;
+    height:0.14rem;
+    border-radius: 50%;
+    background: url("../img/cube.png") no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.title span{
+    padding:0 0.4rem;
+}
+.prize_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.prize_item{
+    width:3.36rem;
+    background:#fff;
+    border-radius:0.10rem;
+    padding-bottom:0.2rem;
+    margin-bottom:0.2rem;
+}
+.prize_item dt{
+    width:3.36rem;
+    height:2.8rem;
+}
+.prize_item dt img{
+    width:100%;
+    height:100%;
+}
+.prize_item dd{
+    padding:0 0.14rem;
+    font-size: 0.28rem;
+    line-height: 0.32rem;
+    margin-top:0.1rem;
+    color:#212121;
+}
+.prize_item span{
+    float: right;
+    font-size: 0.3rem;
+    margin-right:0.14rem;
+    line-height: 0.32rem;
+    color:#F87355;
+    margin-top:0.06rem;
+}
+
+

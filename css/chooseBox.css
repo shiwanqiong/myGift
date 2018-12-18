@@ -1,0 +1,220 @@
+.root{
+    background-color: #BA3019;
+}
+header{
+    width:100%;
+    position: relative;
+    height:2.28rem;
+    background: url("../img/choose_box_banner.png") no-repeat;
+    background-size: 100%;
+}
+.intro_btn{
+    float:right;
+    margin-right:0.28rem;
+    width:1.44rem;
+    height:0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    background:rgba(255,121,32,0.58);
+    border-radius:0.23rem;
+    font-size: 0.22rem;
+    font-weight: bold;
+    color:#fff;
+    margin-top:0.16rem;
+}
+.main{
+    width:6.24rem;
+    height:9.58rem;
+    position: relative;
+    margin:0 auto;
+    margin-top:-0.6rem;
+    background: url("../img/choose_box_bg.png") no-repeat;
+    background-size: 100%;
+}
+.box{
+    position: absolute;
+    width:0.94rem;
+    height:1.2rem;
+    background: url("../img/box_item.png") no-repeat;
+    background-size: 100%;
+}
+.row1{
+    top:0.7rem;
+}
+.row2{
+    top:2.4rem;
+}
+.row3{
+    top:4.16rem;
+}
+.row4{
+    top:5.9rem;
+}
+.column1{
+    left:0.56rem;
+}
+.column2{
+    left:1.5rem;
+}
+.column3{
+    left:2.42rem;
+}
+.column4{
+    left:3.36rem;
+}
+.column5{
+    left:4.3rem;
+}
+.machine_bottom{
+    position: absolute;
+    width:6.24rem;
+    height:1.85rem;
+    bottom:0;
+    left:0;
+    right:0;
+    background:url("../img/machine_bottom.png") no-repeat;
+    background-size: 100%;
+}
+.container{
+    position: absolute;
+    top:8rem;
+    left:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:3.6rem;
+    height:0.58rem;
+    border-radius: 0.2rem;
+    background:rgba(209,162,49,0.6);
+    z-index: 1000;
+}
+.container img{
+    width:1.72rem;
+    height:0.24rem;
+}
+.price{
+    position: absolute;
+    top:4.72rem;
+    right:0.22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:0.45rem;
+    height:0.57rem;
+    font-size: 0.16rem;
+    color:#996D02;
+}
+.mask,.mask1{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    z-index:1999;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    align-items: center;
+    display: none;
+}
+.mask1{
+    justify-content: center;
+}
+.mask.show,.mask1.show{
+    display: flex;
+}
+.gift_plat{
+    position: relative;
+    width:4.5rem;
+    height:4.14rem;
+    margin:0 auto;
+    background: url("../img/box_plat.png") no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    text-align: center;
+    animation:zoomIn .15s ease forwards;
+}
+.shake{
+    animation: shake 1.2s linear;
+    -o-animation: shake 1.2s linear;
+    -webkit-animation: shake 1.2s linear;
+    -moz-animation: shake 1.2s linear;
+    -webkit-animation-fill-mode:forwards;
+}
+.gift_plat img{
+    width:4.24rem;
+    height:2.8rem;
+}
+.gift_plat .gift_box{
+    display: none;
+}
+.gift_plat .gift_box.show{
+    display: block;
+}
+.gift_plat .show{
+    display: block;
+}
+.gift_plat dt{
+    font-size: 0.22rem;
+    color:#FAD06F;
+    text-align: center;
+    margin-bottom:0.2rem;
+}
+.gift_plat dd{
+    width:1.74rem;
+    height:1.73rem;
+    padding:0.1rem;
+    background: #FD6037;
+    margin:0 auto;
+}
+.gift_plat dd img{
+    width:100%;
+    height:100%;
+    background: #fff;
+}
+.gift{
+    position: absolute;
+    top:-1.3rem;
+    left:1.28rem;
+}
+@-webkit-keyframes shake {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale3d(1, 1, 1);
+
+    }
+    6%{
+        -webkit-transform: scale(.9) rotate(-8deg);
+        -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -8deg);
+    }
+    18%, 30%,42%{
+        -webkit-transform: scale(1.1) rotate(8deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 8deg);
+
+    }
+    12%,24%, 36%,48%{
+        -webkit-transform: scale(1.1) rotate(-8deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -8deg);
+
+    }
+}
+.prize_intro{
+    width:4.6rem;
+    height:5.6rem;
+    padding:0.24rem 0.3rem 0;
+    border-radius: 0.2rem;
+    background: #fff;
+    color:#333333;
+    font-size: 0.22rem;
+    line-height: 0.36rem;
+}
+.prize_intro .title{
+    font-size: 0.28rem;
+    color:#272727;
+    line-height: 0.68rem;
+    text-align: center;
+}
+.text{
+    text-indent: 0.44rem;
+}
+
+
+

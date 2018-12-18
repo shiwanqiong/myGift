@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>福星来</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="../css/ydui.css"/>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/ydui.flexible.js"></script>
+    <style>
+        header{
+            position: relative;
+        }
+        .short_info{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <header>
+            <div class="short_info">
+                <span class="short_btn"></span>
+                <a href="myCoin.html" class="coin_info">
+                    <span class="icon_coin"></span>
+                    <span class="coin_count">150</span>
+                    <span class="icon_add"></span>
+                </a>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="myCoin.html">
+                        充值中心
+                    </a>
+                </li>
+                <li>
+                    <a href="prizeIntro.html">
+                        奖品介绍
+                    </a>
+                </li>
+                <li>
+                    <a href="##">
+                        客服中心
+                    </a>
+                </li>
+            </ul>
+            <div class="music_icon on" onclick="playMusic()">
+                <img src="../img/music_icon.png" alt="">
+                <audio id="musicfx" loop="loop" autoplay="autoplay">
+                    <source src="../img/Summer.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="m-slider" data-ydui-slider="{autoplay: 3000,speed:200,lazyLoad:true}" id="J_Slider">
+                <div class="slider-wrapper">
+                    <div class="slider-item">
+                        <img src="../img/banner1.png" alt="">
+                    </div>
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="../img/banner2.jpg">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="../img/banner3.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-pagination"></div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="msg_box">
+                <ul>
+                    <li class="msg_item">
+                        手机尾号15482466214获得飞科剃须刀一个，全国包邮到家111
+                    </li>
+                    <li class="msg_item">
+                        手机尾号15482466214获得飞科剃须刀一个，全国包邮到家222
+                    </li>
+                    <li class="msg_item">
+                        手机尾号15482466214获得飞科剃须刀一个，全国包邮到家333
+                    </li>
+                    <li class="msg_item">
+                        手机尾号15482466214获得飞科剃须刀一个，全国包邮到家444
+                    </li>
+                </ul>
+            </div>
+            <div class="box_list">
+                <a class="box_item" href="chooseBox.html">
+                    <dl>
+                        <dt></dt>
+                        <dd class="btn">1号福袋机</dd>
+                    </dl>
+                </a>
+                <a class="box_item" href="chooseBox.html">
+                    <dl>
+                        <dt></dt>
+                        <dd class="btn">2号福袋机</dd>
+                    </dl>
+                </a>
+                <a class="box_item" href="chooseBox.html">
+                    <dl>
+                        <dt></dt>
+                        <dd class="btn">3号福袋机</dd>
+                    </dl>
+                </a>
+                <a class="box_item" href="chooseBox.html">
+                    <dl>
+                        <dt></dt>
+                        <dd class="btn">4号福袋机</dd>
+                    </dl>
+                </a>
+                <a class="box_item" href="chooseBox.html">
+                    <dl>
+                        <dt></dt>
+                        <dd class="btn">5号福袋机</dd>
+                    </dl>
+                </a>
+                <a class="box_item" href="chooseBox.html">
+                    <dl>
+                        <dt></dt>
+                        <dd class="btn">6号福袋机</dd>
+                    </dl>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <a href="index.html" class="active">
+                <dl>
+                    <dt class="home">
+                        <img src="../img/home.png" alt="">
+                    </dt>
+                    <dd>首页</dd>
+                </dl>
+            </a>
+            <a href="mine.html">
+                <dl>
+                    <dt class="mine">
+                        <img src="../img/mine.png" alt="">
+                    </dt>
+                    <dd>我的</dd>
+                </dl>
+            </a>
+            <a href="">
+                <dl>
+                    <dt class="cus_service">
+                        <img src="../img/cus_service.png" alt="">
+                    </dt>
+                    <dd>客服</dd>
+                </dl>
+            </a>
+        </footer>
+    </div>
+    <div class="body_mask"></div>
+</body>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../js/ydui.js"></script>
+<script src="../js/textSlider.js"></script>
+<script>
+    autoPlayAudio();
+    function playMusic(){
+        if ($('.music_icon').hasClass('on')){
+            $('.music_icon audio').get(0).pause();
+            $('.music_icon').removeClass('on').addClass('stop');
+        }else if($('.music_icon').hasClass('stop')){
+            $('.music_icon audio').get(0).play();
+            $('.music_icon').removeClass('stop').addClass('on');
+        }
+        event.stopPropagation(); //阻止冒泡
+    }
+    function autoPlayAudio() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+            var globalAudio=document.getElementById("musicfx");
+            globalAudio.play();
+        });
+    };
+    $(function(){
+        $('.music_icon audio').get(0).play();
+        $('.msgBox').textSlider({
+            speed:50,
+            line:10
+        });
+        $('.short_btn').click(function(){
+            $('.nav').slideDown();
+            $('.body_mask').show();
+        });
+        $('.body_mask').click(function(){
+            $('.nav').slideUp();
+            $('.body_mask').hide();
+        })
+    })
+</script>
+</html>
