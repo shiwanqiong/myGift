@@ -13,7 +13,7 @@ footer{
     right:0;
     padding:0 0.8rem;
     background-color: #fff;
-    box-shadow:0px -1px 0px 0px rgba(255,255,255,1);
+    box-shadow:0px 1px 0px 0px rgba(255,255,255,1);
     justify-content: space-between;
     align-items: center;
 }
@@ -35,12 +35,12 @@ footer dt{
 .active .home{
     background-image: url(../img/home_act.png);
 }
-/*.active .mine{*/
-    /*background-image: url("../img/mine_act.png");*/
-/*}*/
-.active .cus_service{
-    background-image: url("../img/cus_service_act.png");
+.active .mine{
+    background-image: url("../img/mine_act.png");
 }
+/*.active .cus_service{*/
+    /*background-image: url("../img/cus_service_act.png");*/
+/*}*/
 footer dt img{
     width:100%;
     height:100%;

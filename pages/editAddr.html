@@ -18,28 +18,38 @@
             <div class="row">
                 <label for="">收货人姓名</label>
                 <div class="info">
-                    <input type="text">
+                    <input type="text" value="张三">
                 </div>
             </div>
             <div class="row">
                 <label for="">手机号码</label>
                 <div class="info">
-                    <input type="text">
+                    <input type="text" value="13326575423">
                 </div>
             </div>
             <div class="row">
                 <label for="">所在地区</label>
                 <div class="info">
-                    <input type="text" readonly id="addr" placeholder="请选择">
+                    <input type="text" readonly id="addr">
                     <span class="arr_right"></span>
                 </div>
             </div>
             <div class="row">
                 <label for="">详细地址</label>
                 <div class="info">
-                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                    <textarea name="" id="" cols="30" rows="3">详细地址</textarea>
                 </div>
             </div>
+        </div>
+        <div class="foot">
+            <a class="add_addr" href="addAddr.html">
+                保存地址
+            </a>
+        </div>
+        <div class="foot foot1">
+            <a class="add_addr" href="addAddr.html">
+                删除地址
+            </a>
         </div>
     </div>
 
@@ -50,7 +60,13 @@
 <script>
     $(function(){
         var $address=$('#addr');
-        $address.citySelect();
+        var addr={
+            provance: '新疆',
+            city: '乌鲁木齐市',
+            area: '天山区'
+        };
+        $address.citySelect(addr);
+        $address.val(addr.provance + ' ' + addr.city + ' ' + addr.area);
         $address.on('click',function(){
             $address.citySelect('open');
         });

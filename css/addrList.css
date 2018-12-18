@@ -41,10 +41,11 @@
     color:#6A6A6A;
 }
 .arr_right{
-    width:0.3rem;
+    width:0.16rem;
     height:0.3rem;
     flex-shrink: 0;
-    border:1px solid #999;
+    background: url("../img/arr_right.png") no-repeat;
+    background-size:100%;
 }
 .foot{
     /*padding:0 0.28rem;*/
@@ -53,12 +54,13 @@
 }
 .add_addr{
     display: inline-block;
-    width:100%;
-    height:0.61rem;
-    line-height: 0.6rem;
-    color:#fff;
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #fff;
     text-align: center;
-    background:linear-gradient(-90deg,rgba(255,124,106,1),rgba(252,179,93,1));
-    box-shadow:0 0.05rem 0.07rem 0 rgba(246, 82, 103, 0.35);
-    border-radius:1rem;
+    background: linear-gradient(-90deg,rgba(255,124,106,1),rgba(252,179,93,1));
+    box-shadow: 0 0.05rem 0.07rem 0 rgba(246, 82, 103, 0.35);
+    border-radius: 1rem;
+    font-size: 0.3rem;
 }

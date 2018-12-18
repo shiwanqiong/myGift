@@ -25,9 +25,11 @@ label{
 .info{
     flex:1;
     padding-left:0.6rem;
+    padding-right:0.3rem;
+    position: relative;
 }
 .row:last-child .info{
-    padding-top:0.28rem;
+    padding-top:0.24rem;
 }
 input,textarea{
     -webkit-appearance: none;
@@ -37,4 +39,57 @@ input,textarea{
     width:100%;
     height:100%;
 }
-
+.arr_right{
+    position: absolute;
+    width:0.12rem;
+    height:0.24rem;
+    background: url("../img/arr_right.png") no-repeat;
+    background-size: 100%;
+    top:0.35rem;
+    right:0;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #E7884F;
+    text-align: right;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #E7884F;
+    text-align: right;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #E7884F;
+    text-align: right;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #E7884F;
+    text-align: right;
+}
+.foot{
+    padding:0 0.28rem;
+    text-align: center;
+    margin-top:1rem;
+}
+.foot1{
+    margin-top:0.4rem;
+}
+.add_addr{
+    display: inline-block;
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(-90deg,rgba(255,124,106,1),rgba(252,179,93,1));
+    box-shadow: 0 0.05rem 0.07rem 0 rgba(246, 82, 103, 0.35);
+    border-radius: 1rem;
+    font-size: 0.3rem;
+}
+.foot1 .add_addr{
+    text-align: center;
+    background: #ffefef;
+    box-shadow: none;
+    border: 0.01rem solid #ffb0aa;
+    border-radius: 1rem;
+    font-size: 0.3rem;
+    color: #FF5E53;
+}
