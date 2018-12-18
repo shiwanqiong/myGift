@@ -48,11 +48,14 @@ header{
     line-height: 0.6rem;
     overflow: hidden;
     padding:0 0.3rem;
-    background:rgba(255,255,255,0.2);
+    background:#B62F11;
     border-radius:4px;
     color:#fff;
     margin-top:0.26rem;
     margin-bottom:0.26rem;
+}
+.msg_box ul li{
+    color:#FFE9BB;
 }
 .box_list{
     display: flex;

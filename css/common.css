@@ -35,9 +35,9 @@ footer dt{
 .active .home{
     background-image: url(../img/home_act.png);
 }
-.active .mine{
-    background-image: url("../img/mine_act.png");
-}
+/*.active .mine{*/
+    /*background-image: url("../img/mine_act.png");*/
+/*}*/
 .active .cus_service{
     background-image: url("../img/cus_service_act.png");
 }
