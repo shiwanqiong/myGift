@@ -94,7 +94,7 @@ header{
     text-align: center;
     margin-top:0.1rem;
 }
-.tool-item a{
+.tool-item .link{
     display: flex;
     align-items:center;
     justify-content: center;
@@ -107,3 +107,17 @@ header{
     text-align: center;
     flex-shrink: 0;
 }
+.tool-item1{
+    margin-top: 0.8rem;
+    height: 0.9rem;
+    border-radius: 1rem;
+    background: #ffc053;
+}
+.help_btn{
+    color: #a50303;
+    line-height: 1.2rem;
+    font-size: 0.36rem;
+    margin: 0 auto;
+}
+
+
