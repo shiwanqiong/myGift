@@ -79,6 +79,7 @@
         </header>
         <div class="main">
             <div class="msg_box">
+                <span class="msg_icon"></span>
                 <ul>
                     <li class="msg_item">
                         手机尾号15482466214获得飞科剃须刀一个，全国包邮到家111
@@ -194,15 +195,23 @@
         });
     };
     $(function(){
-        $('.music_icon audio').get(0).play();
-        $('.msgBox').textSlider({
-            speed:50,
-            line:10
+        //文字滚动
+        $('.msg_box').textSlider({
+            speed: 80, //数值越大，速度越慢
+            rowHeight: 32 //li的高度
         });
+        //播放音频
+        $('.music_icon audio').get(0).play();
+        // $('.msgBox').textSlider({
+        //     speed:50,
+        //     line:10
+        // });
+        //显示隐藏菜单
         $('.short_btn').click(function(){
             $('.nav').slideDown();
             $('.body_mask').show();
         });
+        //关闭隐藏菜单
         $('.body_mask').click(function(){
             $('.nav').slideUp();
             $('.body_mask').hide();
