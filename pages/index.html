@@ -164,11 +164,11 @@
     <div class="body_mask"></div>
 </body>
 <script src="../js/jquery-3.3.1.min.js"></script>
-<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="../js/ydui.js"></script>
 <script src="../js/textSlider.js"></script>
 <script>
-    // autoPlayAudio();
+    autoPlayAudio();
     function playMusic(){
         if ($('.music_icon').hasClass('on')){
             $('.music_icon audio').get(0).pause();
@@ -202,10 +202,6 @@
         });
         //播放音频
         $('.music_icon audio').get(0).play();
-        // $('.msgBox').textSlider({
-        //     speed:50,
-        //     line:10
-        // });
         //显示隐藏菜单
         $('.short_btn').click(function(){
             $('.nav').slideDown();
