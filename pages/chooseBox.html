@@ -24,6 +24,7 @@
                 </a>
             </div>
             <a href="##" class="intro_btn" onclick="showPrizeIntro()">奖品介绍</a>
+            <div class="count">05：25</div>
             <ul class="nav">
                 <li>
                     <a href="myCoin.html">
@@ -77,6 +78,7 @@
             </span>
         </div>
         <div class="mask">
+            <span class="close_btn"></span>
             <div class="gift_plat">
                 <img src="../img/box_close.png" alt="" class="gift_box box_close show shake">
                 <div class="gift_box box_open" onclick="gotobox()">
@@ -110,6 +112,35 @@
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/anime.min.js"></script>
 <script>
+    function resetTime(time){
+        var timer=null;
+        var t=time;
+        var m=0;
+        var s=0;
+        m=Math.floor(t/60%60);
+        if(m<10){
+            m='0'+m
+        }
+        s=Math.floor(t%60);
+        function countDown(){
+            s--;
+            if(s<10){
+                s='0'+s
+            }
+            if(s.length>=3){
+                s=59;
+                m="0"+(Number(m)-1);
+            }
+            if(m.length>=3){
+                m='00';
+                s='00';
+                clearInterval(timer);mask
+            }
+            $('.count').html(m+"："+s)
+        }
+        timer=setInterval(countDown,1000);
+    }
+    resetTime(325);
     var isClick=false;
     function drop(ele,row,column){
         if(isClick==true){
@@ -185,6 +216,9 @@
         $('.body_mask').click(function(){
             $('.nav').slideUp();
             $('.body_mask').hide();
+        })
+        $('.close_btn').click(function(){
+            $('.mask').removeClass('show');
         })
     })
 </script>

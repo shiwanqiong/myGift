@@ -216,5 +216,23 @@ header{
     text-indent: 0.44rem;
 }
 
+.close_btn{
+    position: absolute;
+    width:0.6rem;
+    height:0.6rem;
+    background:url("../img/close.png") no-repeat;
+    background-size: 100%;
+    top: 2.4rem;
+    right: 1.6rem;
+}
+.count{
+    text-align: right;
+    margin-top: 0.62rem;
+    font-size: 0.3rem;
+    color: #feec85;
+    position: absolute;
+    right: 0.48rem;
+}
+
 
 
